@@ -1,5 +1,8 @@
 @import "tailwindcss";
 
+/* Class-based dark mode so the sun/moon toggle can override system preference. */
+@custom-variant dark (&:where(.dark, .dark *));
+
 :root {
   --background: #ffffff;
   --foreground: #171717;

@@ -79,9 +79,9 @@ export default function PaymentSplitCalculator() {
       </div>
 
       {/* 2. Light panel — independent: enter govt leftover (60%), compute 40% counterpart */}
-      <div className="rounded-[20px] border border-white/25 bg-white/15 p-5 shadow-2xl shadow-black/20 backdrop-blur-2xl">
+      <div className="rounded-[20px] border border-black/10 bg-white/55 p-5 shadow-2xl shadow-black/10 backdrop-blur-2xl dark:border-white/25 dark:bg-white/15 dark:shadow-black/20">
         <label className="block">
-          <span className="text-sm font-medium text-white/90">
+          <span className="text-sm font-medium text-zinc-700 dark:text-white/90">
             เงินรัฐคงเหลือ (60%) ฿
           </span>
           <input
@@ -90,7 +90,7 @@ export default function PaymentSplitCalculator() {
             value={govLeft}
             onChange={(e) => setGovLeft(e.target.value)}
             placeholder="0"
-            className={`mt-2 w-full rounded-xl border border-white/25 bg-white/15 px-3 py-2 text-white placeholder-white/40 outline-none focus:border-white/70 ${noSpin}`}
+            className={`mt-2 w-full rounded-xl border border-black/10 bg-white/70 px-3 py-2 text-zinc-900 placeholder-zinc-400 outline-none focus:border-[#2563eb] dark:border-white/25 dark:bg-white/15 dark:text-white dark:placeholder-white/40 dark:focus:border-white/70 ${noSpin}`}
           />
         </label>
 
@@ -106,8 +106,10 @@ export default function PaymentSplitCalculator() {
         </div>
 
         <div className="mt-4 flex items-center justify-between px-1">
-          <span className="text-sm text-white/80">รวมทั้งหมด (100%)</span>
-          <span className="text-lg font-semibold text-white">
+          <span className="text-sm text-zinc-600 dark:text-white/80">
+            รวมทั้งหมด (100%)
+          </span>
+          <span className="text-lg font-semibold text-zinc-900 dark:text-white">
             {fmt2(totalBottom)}
           </span>
         </div>
